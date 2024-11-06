@@ -10,14 +10,14 @@
 
 
 # 要比共享目录的同名文件的 config_version 大才可以生效
-config_version: '2023-02-27'
+config_version: '2024-11-04'  # config_version: '1.0'
 
 
 # options: last | default | _custom_
 # last: the last used latin keyboard layout
 # default: US (ABC) keyboard layout
 # _custom_: keyboard layout of your choice, e.g. 'com.apple.keylayout.USExtended' or simply 'USExtended'
-keyboard_layout: default
+keyboard_layout: last
 # for veteran chord-typist
 chord_duration: 0.1  # seconds
 # options: always | never | appropriate
@@ -157,9 +157,10 @@ preset_color_schemes:
     comment_font_point: 16
     # candidate_list_layout: stacked        # 候选项排列方向 stacked(默认) | linear
     # text_orientation: horizontal          # 文字排列方向 horizontal(默认) | vertical
-    inline_preedit: true                    # 拼音位于： 候选框 false | 行内 true
-    translucency: false                     # 磨砂： false | true
-    mutual_exclusive: false                 # 色不叠加： false | true
+    inline_preedit: true                    # 键入码（拼音）是否显示在键入位置 true | false
+    inline_candidate: false                 # 候选项（词句）是否显示在键入位置 true | false
+    translucency: false                     # 磨砂： true | false
+    mutual_exclusive: false                 # 色不叠加： true | false
     border_height: 0                        # 外边框 高
     border_width: 0                         # 外边框 宽
     corner_radius: 10                       # 外边框 圆角半径
@@ -213,6 +214,171 @@ preset_color_schemes:
     hilited_comment_text_color: 0x444444
     translucency: true              # 磨砂： false | true
     alpha: 0.95                     # 透明度，0~1
+
+  mritd_dark:
+    name: 漠然／mritd dark
+    author: mritd <mritd1234@gmail.com>
+    horizontal: true                          # 水平排列
+    inline_preedit: true                      # 单行显示，false双行显示
+    candidate_format: "%c\u2005%@"            # 用 1/6 em 空格 U+2005 来控制编号 %c 和候选词 %@ 前后的空间。
+    corner_radius: 5                          # 候选条圆角
+    hilited_corner_radius: 3                  # 高亮圆角
+    border_height: 6                          # 窗口边界高度，大于圆角半径才生效
+    border_width: 6                           # 窗口边界宽度，大于圆角半径才生效
+    border_color_width: 0
+    #font_face: "PingFangSC"                   # 候选词字体
+    font_point: 16                            # 候选字词大小
+    label_font_point: 14                      # 候选编号大小
+
+    text_color: 0xdedddd                      # 拼音行文字颜色，24位色值，16进制，BGR顺序
+    back_color: 0x4b4b4b                      # 候选条背景色
+    label_color: 0x888785                     # 预选栏编号颜色
+    border_color: 0x4b4b4b                    # 边框色
+    candidate_text_color: 0xffffff            # 预选项文字颜色
+    hilited_text_color: 0xdedddd              # 高亮拼音 (需要开启内嵌编码)
+    hilited_back_color: 0x252320              # 高亮拼音 (需要开启内嵌编码)
+    hilited_candidate_text_color: 0xFFE696    # 第一候选项文字颜色
+    hilited_candidate_back_color: 0x4b4b4b    # 第一候选项背景背景色
+    hilited_candidate_label_color: 0xffffff   # 第一候选项编号颜色
+    comment_text_color: 0xdedddd              # 拼音等提示文字颜色
+
+  psionics2:
+    name: 幽能／Psionics
+    author: 雨過之後、佛振
+    text_color: 0xc2c2c2
+    back_color: 0x444444
+    candidate_text_color: 0xeeeeee
+    hilited_text_color: 0xeeeeee
+    hilited_back_color: 0x444444
+    hilited_candidate_label_color: 0xfafafa
+    hilited_candidate_text_color: 0xfafafa
+    hilited_candidate_back_color: 0xd4bc00
+    comment_text_color: 0x808080
+    hilited_comment_text_color: 0x444444
+
+  psionics:
+    name: 幽能／Psionics
+    author: 雨過之後、佛振
+    candidate_format: "%c\u2005%@ \u2005"     # 用 1/6 em 空格 U+2005 来控制编号 %c 和候选词 %@ 前后的空间。
+    corner_radius: 8                          # 候选条圆角
+    hilited_corner_radius: 4                  # 高亮圆角
+    border_height: 4                          # 窗口边界高度，大于圆角半径才生效
+    border_width: 4                           # 窗口边界宽度，大于圆角半径才生效
+    font_face: "LXGW WenKai"                       # 候选词字体
+    #font_face: "YaHei Monaco Hybird"         # 候选词字体
+    font_point: 17                            # 候选字词大小
+    #label_font_face: "Helvetica"              # 序号字体及大小
+    label_font_point: 12                      # 候选编号大小
+    #comment_font_face: "Helvetica"            # 注字体及大小
+    comment_font_point: 16
+    text_color: 0xc2c2c2
+    back_color: 0x444444
+    candidate_text_color: 0xeeeeee
+    hilited_text_color: 0xeeeeee
+    hilited_back_color: 0x444444
+    hilited_candidate_label_color: 0xfafafa
+    hilited_candidate_text_color: 0xfafafa
+    hilited_candidate_back_color: 0xd4bc00
+    comment_text_color: 0x808080
+    hilited_comment_text_color: 0x444444
+    translucency: true              # 磨砂： false | true
+    alpha: 0.95                     # 透明度，0~1
+
+  mritd_dark:
+    name: 漠然／mritd dark
+    author: mritd <mritd1234@gmail.com>
+    horizontal: true                          # 水平排列
+    inline_preedit: true                      # 单行显示，false双行显示
+    candidate_format: "%c\u2005%@"            # 用 1/6 em 空格 U+2005 来控制编号 %c 和候选词 %@ 前后的空间。
+    corner_radius: 5                          # 候选条圆角
+    hilited_corner_radius: 3                  # 高亮圆角
+    border_height: 6                          # 窗口边界高度，大于圆角半径才生效
+    border_width: 6                           # 窗口边界宽度，大于圆角半径才生效
+    border_color_width: 0
+    #font_face: "PingFangSC"                   # 候选词字体
+    font_point: 16                            # 候选字词大小
+    label_font_point: 14                      # 候选编号大小
+
+    text_color: 0xdedddd                      # 拼音行文字颜色，24位色值，16进制，BGR顺序
+    back_color: 0x4b4b4b                      # 候选条背景色
+    label_color: 0x888785                     # 预选栏编号颜色
+    border_color: 0x4b4b4b                    # 边框色
+    candidate_text_color: 0xffffff            # 预选项文字颜色
+    hilited_text_color: 0xdedddd              # 高亮拼音 (需要开启内嵌编码)
+    hilited_back_color: 0x252320              # 高亮拼音 (需要开启内嵌编码)
+    hilited_candidate_text_color: 0xFFE696    # 第一候选项文字颜色
+    hilited_candidate_back_color: 0x4b4b4b    # 第一候选项背景背景色
+    hilited_candidate_label_color: 0xffffff   # 第一候选项编号颜色
+    comment_text_color: 0xdedddd              # 拼音等提示文字颜色
+
+  psionics2:
+    name: 幽能／Psionics
+    author: 雨過之後、佛振
+    text_color: 0xc2c2c2
+    back_color: 0x444444
+    candidate_text_color: 0xeeeeee
+    hilited_text_color: 0xeeeeee
+    hilited_back_color: 0x444444
+    hilited_candidate_label_color: 0xfafafa
+    hilited_candidate_text_color: 0xfafafa
+    hilited_candidate_back_color: 0xd4bc00
+    comment_text_color: 0x808080
+    hilited_comment_text_color: 0x444444
+
+  psionics:
+    name: 幽能／Psionics
+    author: 雨過之後、佛振
+    candidate_format: "%c\u2005%@ \u2005"     # 用 1/6 em 空格 U+2005 来控制编号 %c 和候选词 %@ 前后的空间。
+    corner_radius: 8                          # 候选条圆角
+    hilited_corner_radius: 4                  # 高亮圆角
+    border_height: 4                          # 窗口边界高度，大于圆角半径才生效
+    border_width: 4                           # 窗口边界宽度，大于圆角半径才生效
+    font_face: "LXGW WenKai"                       # 候选词字体
+    #font_face: "YaHei Monaco Hybird"         # 候选词字体
+    font_point: 17                            # 候选字词大小
+    #label_font_face: "Helvetica"              # 序号字体及大小
+    label_font_point: 12                      # 候选编号大小
+    #comment_font_face: "Helvetica"            # 注字体及大小
+    comment_font_point: 16
+    text_color: 0xc2c2c2
+    back_color: 0x444444
+    candidate_text_color: 0xeeeeee
+    hilited_text_color: 0xeeeeee
+    hilited_back_color: 0x444444
+    hilited_candidate_label_color: 0xfafafa
+    hilited_candidate_text_color: 0xfafafa
+    hilited_candidate_back_color: 0xd4bc00
+    comment_text_color: 0x808080
+    hilited_comment_text_color: 0x444444
+    translucency: true              # 磨砂： false | true
+    alpha: 0.95                     # 透明度，0~1
+
+  mritd_dark:
+    name: 漠然／mritd dark
+    author: mritd <mritd1234@gmail.com>
+    horizontal: true                          # 水平排列
+    inline_preedit: true                      # 单行显示，false双行显示
+    candidate_format: "%c\u2005%@"            # 用 1/6 em 空格 U+2005 来控制编号 %c 和候选词 %@ 前后的空间。
+    corner_radius: 5                          # 候选条圆角
+    hilited_corner_radius: 3                  # 高亮圆角
+    border_height: 6                          # 窗口边界高度，大于圆角半径才生效
+    border_width: 6                           # 窗口边界宽度，大于圆角半径才生效
+    border_color_width: 0
+    #font_face: "PingFangSC"                   # 候选词字体
+    font_point: 16                            # 候选字词大小
+    label_font_point: 14                      # 候选编号大小
+
+    text_color: 0xdedddd                      # 拼音行文字颜色，24位色值，16进制，BGR顺序
+    back_color: 0x4b4b4b                      # 候选条背景色
+    label_color: 0x888785                     # 预选栏编号颜色
+    border_color: 0x4b4b4b                    # 边框色
+    candidate_text_color: 0xffffff            # 预选项文字颜色
+    hilited_text_color: 0xdedddd              # 高亮拼音 (需要开启内嵌编码)
+    hilited_back_color: 0x252320              # 高亮拼音 (需要开启内嵌编码)
+    hilited_candidate_text_color: 0xFFE696    # 第一候选项文字颜色
+    hilited_candidate_back_color: 0x4b4b4b    # 第一候选项背景背景色
+    hilited_candidate_label_color: 0xffffff   # 第一候选项编号颜色
+    comment_text_color: 0xdedddd              # 拼音等提示文字颜色
 
   # 下面是内置的皮肤 https://github.com/rime/squirrel/blob/master/data/squirrel.yaml
 
