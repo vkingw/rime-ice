@@ -1,5 +1,4 @@
 # Rime table
-# coding: utf-8
 #@/db_name	cn_en.txt
 #@/db_type	tabledb
 #
