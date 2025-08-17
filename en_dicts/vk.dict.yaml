@@ -1,0 +1,10 @@
+# Rime dictionary
+# encoding: utf-8
+# Vincent 自己的 Rime 词库
+# 转化应当大写的单词
+---
+name: vk
+version: "2024-01-03"
+sort: by_weight
+---
+Code review CodeReview
