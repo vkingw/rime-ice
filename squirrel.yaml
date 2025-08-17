@@ -27,6 +27,64 @@ show_notifications_when: appropriate
 # ascii_mode、inline、no_inline、vim_mode 等等设定
 # 可参考 /Library/Input Methods/Squirrel.app/Contents/SharedSupport/squirrel.yaml
 app_options:
+  com.apple.dt.Xcode:
+    ascii_mode: true
+  com.runningwithcrayons.Alfred:
+    ascii_mode: true
+  com.apple.Terminal:
+    ascii_mode: true
+  com.googlecode.iterm2:
+    ascii_mode: true
+  com.apple.finder:
+    ascii_mode: true
+  com.apple.calculator:
+    ascii_mode: true
+  com.apple.launchpad.launcher:
+    ascii_mode: true
+  com.apple.systempreferences:
+    ascii_mode: true
+  com.apple.ActivityMonitor:
+    ascii_mode: true
+  com.apple.keychainaccess:
+    ascii_mode: true
+  com.apple.Spotlight:
+    ascii_mode: true
+  com.jetbrains.intellij:
+    ascii_mode: true
+  io.nteract.nteract:
+    ascii_mode: true
+  com.agilebits.onepassword8:
+    ascii_mode: true
+  com.agilebits.onepassword8-helper:
+    ascii_mode: true
+  com.kapeli.dashdoc:
+    ascii_mode: true
+  com.google.android.studio:
+    ascii_mode: true
+  com.jetbrains.WebStorm:
+    ascii_mode: true
+  net.kovidgoyal.kitty:
+    ascii_mode: true
+  com.github.GitHubClient:
+    ascii_mode: true
+  com.microsoft.VSCode:
+    ascii_mode: true
+  org.mozilla.firefox:
+    ascii_mode: true
+  com.apple.Safari:
+    ascii_mode: true
+  org.chromium.Chromium:
+    ascii_mode: true
+  dev.warp.Warp-Stable:
+    ascii_mode: true
+  co.zeit.hyper:
+    ascii_mode: true
+  com.microsoft.VSCodeInsiders:
+    ascii_mode: true
+  com.todesktop.230313mzl4w4u92:
+    ascii_mode: true
+  org.alacritty:
+    ascii_mode: true
   # com.apple.Spotlight:
   #   ascii_mode: true    # 开启默认英文
   # com.microsoft.VSCode:
@@ -35,8 +93,10 @@ app_options:
 
 style:
   # 选择皮肤，亮色与暗色主题
-  color_scheme: purity_of_form_custom
-  color_scheme_dark: purity_of_form_custom
+  # color_scheme: purity_of_form_custom
+  # color_scheme_dark: purity_of_form_custom
+  color_scheme: psionics
+  color_scheme_dark: psionics
 
   # 以下是预设选项。如果皮肤没写，则使用这些属性；如果皮肤写了，使用皮肤的。
 
@@ -52,7 +112,7 @@ style:
   # Whether transparent colors stack on each other
   mutual_exclusive: false
   # Whether to use a translucent background. Only visible when background color is transparent
-  translucency: false
+  translucency: true
 
   corner_radius: 7
   hilited_corner_radius: 0
@@ -129,6 +189,60 @@ preset_color_schemes:
     # hilited_back_color:                   # 选中拼音底色 （inline_preedit: false）
     # border_color:                         # 外边框颜色
 
+  psionics:
+    name: 幽能／Psionics
+    author: 雨過之後、佛振
+    candidate_format: "%c\u2005%@ \u2005"     # 用 1/6 em 空格 U+2005 来控制编号 %c 和候选词 %@ 前后的空间。
+    corner_radius: 8                          # 候选条圆角
+    hilited_corner_radius: 4                  # 高亮圆角
+    border_height: 4                          # 窗口边界高度，大于圆角半径才生效
+    border_width: 4                           # 窗口边界宽度，大于圆角半径才生效
+    # font_face: "LXGW WenKai"                       # 候选词字体
+    #font_face: "YaHei Monaco Hybird"         # 候选词字体
+    font_point: 18                            # 候选字词大小
+    #label_font_face: "Helvetica"              # 序号字体及大小
+    label_font_point: 15                      # 候选编号大小
+    #comment_font_face: "Helvetica"            # 注字体及大小
+    comment_font_point: 15
+    text_color: 0xc2c2c2
+    back_color: 0x444444
+    candidate_text_color: 0xeeeeee
+    hilited_text_color: 0xeeeeee
+    hilited_back_color: 0x444444
+    hilited_candidate_label_color: 0xfafafa
+    hilited_candidate_text_color: 0xfafafa
+    hilited_candidate_back_color: 0xd4bc00
+    comment_text_color: 0x808080
+    hilited_comment_text_color: 0x444444
+    translucency: true              # 磨砂： false | true
+    alpha: 0.95                     # 透明度，0~1
+
+  mritd_dark:
+    name: 漠然／mritd dark
+    author: mritd <mritd1234@gmail.com>
+    horizontal: true                          # 水平排列
+    inline_preedit: true                      # 单行显示，false双行显示
+    candidate_format: "%c\u2005%@"            # 用 1/6 em 空格 U+2005 来控制编号 %c 和候选词 %@ 前后的空间。
+    corner_radius: 5                          # 候选条圆角
+    hilited_corner_radius: 3                  # 高亮圆角
+    border_height: 6                          # 窗口边界高度，大于圆角半径才生效
+    border_width: 6                           # 窗口边界宽度，大于圆角半径才生效
+    border_color_width: 0
+    #font_face: "PingFangSC"                   # 候选词字体
+    font_point: 16                            # 候选字词大小
+    label_font_point: 14                      # 候选编号大小
+
+    text_color: 0xdedddd                      # 拼音行文字颜色，24位色值，16进制，BGR顺序
+    back_color: 0x4b4b4b                      # 候选条背景色
+    label_color: 0x888785                     # 预选栏编号颜色
+    border_color: 0x4b4b4b                    # 边框色
+    candidate_text_color: 0xffffff            # 预选项文字颜色
+    hilited_text_color: 0xdedddd              # 高亮拼音 (需要开启内嵌编码)
+    hilited_back_color: 0x252320              # 高亮拼音 (需要开启内嵌编码)
+    hilited_candidate_text_color: 0xFFE696    # 第一候选项文字颜色
+    hilited_candidate_back_color: 0x4b4b4b    # 第一候选项背景背景色
+    hilited_candidate_label_color: 0xffffff   # 第一候选项编号颜色
+    comment_text_color: 0xdedddd              # 拼音等提示文字颜色
 
   # 下面是内置的皮肤 https://github.com/rime/squirrel/blob/master/data/squirrel.yaml
 
@@ -206,19 +320,7 @@ preset_color_schemes:
     hilited_candidate_back_color: 0x10000000  # 0x333333
     comment_text_color: 0x606cff
 
-  psionics:
-    name: 幽能／Psionics
-    author: 雨過之後、佛振
-    text_color: 0xc2c2c2
-    back_color: 0x444444
-    candidate_text_color: 0xeeeeee
-    hilited_text_color: 0xeeeeee
-    hilited_back_color: 0x444444
-    hilited_candidate_label_color: 0xfafafa
-    hilited_candidate_text_color: 0xfafafa
-    hilited_candidate_back_color: 0xd4bc00
-    comment_text_color: 0x808080
-    hilited_comment_text_color: 0x444444
+
 
   purity_of_form:
     name: 純粹的形式／Purity of Form
