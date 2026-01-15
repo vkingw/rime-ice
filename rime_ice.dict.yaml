@@ -15,6 +15,11 @@ import_tables:
   # 建议把扩展词库放到下面，有重复词条时，最上面的权重生效
   # - mydict1           # 挂载配置目录下的 mydict1.dict.yaml 词库文件
   # - cn_dicts/mydict2  # 挂载 cn_dicts 目录里的 mydict2.dict.yaml 词库文件
+  - dicts/jichu.pro       #包含2-3字词组的词库
+  - dicts/lianxiang.pro   #包含5字以上词组,当输入四个字之后形成联想候选
+  - dicts/duoyin.pro      #包含多音字词组,用于兼容词组的多种读音场景
+  - dicts/cn&en           #包含中英文混合词组,用于中英文混合场景
+  - dicts/en              #包含英文词组,用于英文场景
 ...
 
 # 按需启用：
