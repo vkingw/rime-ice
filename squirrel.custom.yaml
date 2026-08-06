@@ -60,6 +60,10 @@ patch:
       ascii_mode: true
     com.mitchellh.ghostty:
       ascii_mode: true
+    com.github.tty7:
+      ascii_mode: true
+    com.mosh:
+      ascii_mode: true
 
   style:
     # 选择皮肤，亮色与暗色主题
