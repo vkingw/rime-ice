@@ -21,3 +21,9 @@ cn_dicts/temp.txt
 rime_console
 rime_deployer
 rime_patch
+
+lua/wanxiang
+wanxiang*
+dicts/
+lua/data
+*.jpg
