@@ -24,4 +24,6 @@ rime_patch
 
 !default.custom.yaml
 !squirrel.custom.yaml
+!wanxiang.custom.yaml
+custom/*.yaml
 wanxiang-lts-zh-hans.gram
