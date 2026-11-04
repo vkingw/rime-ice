@@ -31,3 +31,5 @@ patch:
     - name: english
       reset: 1
       states: [英文关, 英文开]
+  # 默认启用 Emoji 候选
+  switches/@3/reset: 1
