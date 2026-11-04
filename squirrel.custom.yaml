@@ -70,6 +70,8 @@ patch:
       ascii_mode: true
     dev.herdr.app:
       ascii_mode: true
+    com.superlogical.rex:
+      ascii_mode: true
 
   style:
     # 选择皮肤，亮色与暗色主题
